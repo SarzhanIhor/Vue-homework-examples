@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Document</title>
+</head>
+<body>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.min.js"></script>
+
+    <div id="app">
+
+        <!-- Задача 9.1 Дан инпут. Сделайте так, чтобы вводимый в инпут текст сразу выводился в абзаце под ним. -->
+        <!-- Задача 9.2 Модифицируйте предыдущую задачу так, чтобы текст в абзац выводился в верхнем регистре. -->
+        <input v-model="str">
+        <p>Текст: {{ str.toUpperCase() }}</p>
+
+
+        <!-- Задача 9.3 Дан инпут и абзац. В инпут вводится возраст пользователя. Сделайте так, чтобы при наборе текста в абзаце автоматически появлялся год рождения пользователя. -->
+        <input v-model="age">
+        <p>Год рождения: {{ (new Date()).getFullYear() - age }}</p>
+
+        <!-- Задача 9.4 Дан инпут. Сделайте так, чтобы вводимый в инпут текст сразу выводился в абзаце под ним в перевернутом виде. -->
+        <input v-model="str2">
+        <p>Текст: {{ reverseStr(str2) }}</p>
+
+
+</div>
+
+
+    <script src="index.js"></script>
+
+</body>
+</html>
